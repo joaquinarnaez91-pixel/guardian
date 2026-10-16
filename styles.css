@@ -1,0 +1,76 @@
+/* Guardian's colours, from the app's Theme.swift. */
+:root {
+  --ground: #0B1020;
+  --ground-deep: #070A16;
+  --surface: #141A2E;
+  --hairline: #2A3352;
+  --violet: #8B7CFF;
+  --violet-soft: #A79CFF;
+  --lilac: #C4B5FD;
+  --logo: #5B34B8;
+  --gold: #FFC857;
+  --text: #EEF1FF;
+  --muted: #9AA3C7;
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Manrope", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+  font: 500 17px/1.6 var(--sans);
+}
+a { color: var(--violet-soft); }
+a:hover { color: var(--text); }
+img { max-width: 100%; display: block; }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+.narrow { max-width: 720px; }
+
+header.top { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); font-weight: 800; letter-spacing: 0.16em; font-size: 15px; }
+.brand img { width: 40px; height: 40px; border-radius: 10px; }
+
+.eyebrow { font-size: 13px; font-weight: 800; letter-spacing: 0.2em; color: var(--violet-soft); text-transform: uppercase; margin: 0 0 16px; }
+h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.02em; line-height: 1.08; margin: 0; }
+h1 { font-size: clamp(44px, 9vw, 84px); }
+h2 { font-size: clamp(30px, 5vw, 44px); }
+h1 em, h2 em { color: var(--lilac); }
+.lead { color: var(--muted); font-size: 19px; max-width: 560px; margin: 24px 0 0; }
+
+.hero { position: relative; padding: 56px 0 72px; overflow: hidden; }
+.hero::before { content: ""; position: absolute; width: 640px; height: 640px; border-radius: 50%; background: var(--logo); opacity: 0.35; filter: blur(140px); right: -240px; top: -80px; pointer-events: none; }
+.hero > * { position: relative; }
+
+.stores { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.store { display: inline-flex; align-items: center; gap: 12px; min-height: 56px; padding: 10px 22px; border-radius: 16px; text-decoration: none; background: var(--text); color: var(--ground); font-weight: 800; }
+.store small { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; opacity: 0.7; }
+.store span { line-height: 1.2; }
+.store svg { width: 26px; height: 26px; flex: none; }
+.store.soon { background: transparent; color: var(--text); border: 1.5px solid var(--hairline); }
+.store.mine { outline: 3px solid var(--violet); outline-offset: 3px; }
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; padding: 24px 0 72px; }
+.card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 24px; padding: 28px; }
+.card h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; margin: 0 0 8px; }
+.card p { color: var(--muted); margin: 0; }
+
+.journeys { display: flex; justify-content: center; align-items: flex-end; gap: 0; margin: 8px 0 0; }
+.journeys img { width: 22%; max-width: 190px; margin: 0 -2%; filter: drop-shadow(0 0 24px rgba(139,124,255,0.25)); }
+
+.private { text-align: center; padding: 24px 0 80px; }
+.private p { color: var(--muted); max-width: 560px; margin: 16px auto 0; }
+
+footer { border-top: 1px solid var(--hairline); padding: 28px 0 48px; color: var(--muted); font-size: 15px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+
+/* Policy pages */
+.doc { padding: 24px 0 72px; }
+.doc h1 { font-size: clamp(38px, 7vw, 56px); margin-bottom: 8px; }
+.doc .date { color: var(--muted); margin: 0 0 40px; }
+.doc h2 { font-family: var(--sans); font-weight: 800; font-size: 20px; letter-spacing: 0; margin: 40px 0 8px; }
+.doc p, .doc li { color: #D4D9EE; }
+.doc ul { padding-left: 22px; }
