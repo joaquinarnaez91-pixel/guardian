@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Guardian curtain test</title>
+  <link rel="icon" href="../icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .test { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 48px 0; }
+    .test h1 { font-size: clamp(38px, 9vw, 56px); }
+    .test ol { color: #D4D9EE; padding-left: 22px; margin: 24px 0 0; }
+    .test li { margin: 8px 0; }
+    .cta { display: flex; align-items: center; justify-content: center; min-height: 56px; margin-top: 32px; border-radius: 28px; background: var(--violet); color: var(--ground); font-weight: 800; font-size: 18px; text-decoration: none; box-shadow: 0 4px 0 #5B4FCC; }
+    .cta:hover { color: var(--ground); }
+  </style>
+</head>
+<body>
+  <!-- If Guardian's Safari extension is on and allowed on all websites, it replaces this
+       page with the curtain before it shows. Seeing this page means one step is missing. -->
+  <main class="wrap narrow test">
+    <p class="eyebrow">Curtain test</p>
+    <h1>Guardian isn't on <em>in Safari yet.</em></h1>
+    <p class="lead">If it were, Guardian's curtain would have appeared instead of this page. One of these is missing:</p>
+    <ol>
+      <li>Guardian is switched on in Safari's extensions.</li>
+      <li>All Websites is set to <strong>Allow</strong> for Guardian.</li>
+    </ol>
+    <a class="cta" href="guardian://safari-setup">Fix it in Guardian</a>
+    <p class="lead" style="font-size:15px">Testing in Chrome or another browser? The curtain works in Safari. Open this page in Safari to test.</p>
+  </main>
+</body>
+</html>
